@@ -27,3 +27,20 @@ extension UIViewController {
         aView = nil
     }
 }
+
+extension UITextField {
+    func makeCornerRound(textField: UITextField) {
+        textField.layer.cornerRadius = textField.layer.frame.height / 2
+        textField.clipsToBounds = true
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.red.cgColor
+    }
+}
+
+extension UIButton{
+    func makeCornerRound(uiButton: UIButton) {
+        uiButton.layer.borderWidth = 1.0
+        uiButton.layer.borderColor = UIColor.red.cgColor
+        uiButton.layer.cornerRadius = uiButton.layer.frame.height / 2
+    }
+}

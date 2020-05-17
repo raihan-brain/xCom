@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -21,17 +22,9 @@ class LoginViewController: UIViewController {
     }
     
     func modifyUi() {
-        emailTextField.layer.cornerRadius = emailTextField.layer.frame.height / 2
-        emailTextField.clipsToBounds = true
-        emailTextField.layer.borderColor = UIColor.red.cgColor
-        emailTextField.layer.borderWidth = 1.0
-        passwordTextField.layer.cornerRadius = passwordTextField.layer.frame.height / 2
-        passwordTextField.layer.borderColor = UIColor.red.cgColor
-        passwordTextField.layer.borderWidth = 1.0
-        passwordTextField.clipsToBounds = true
-        loginButton.layer.borderWidth = 1.0
-        loginButton.layer.borderColor = UIColor.red.cgColor
-        loginButton.layer.cornerRadius = loginButton.layer.frame.height / 2
+        emailTextField.makeCornerRound(textField: emailTextField)
+        passwordTextField.makeCornerRound(textField: passwordTextField)
+        loginButton.makeCornerRound(uiButton: loginButton)
     }
     
 
@@ -46,6 +39,6 @@ class LoginViewController: UIViewController {
     */
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        print("working on it")
     }
+    
 }
