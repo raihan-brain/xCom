@@ -16,17 +16,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signupClicked(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let mvc = storyboard.instantiateViewController(withIdentifier: "SignupVC")
+        self.navigationController?.pushViewController(mvc, animated: true)
+    }
+    @IBAction func loginPressed(_ sender: UIButton) {
         self.showSnipper()
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (t) in
             self.removeSnipper()
             let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-//            let mvc = storyboard.instantiateViewController(withIdentifier: "SignupVC")
             let mvc = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             mvc.modalTransitionStyle = .crossDissolve
-            //        self.present(mvc, animated: true, completion: nil)
-            //        self.navigationController?.pushViewController(mvc, animated: true)
             self.navigationController?.pushViewController(mvc, animated: true)
         }
     }
+    
 }
 
