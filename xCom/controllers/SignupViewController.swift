@@ -47,6 +47,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: UIButton) {
         if let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController {
+            vc.navigationItem.hidesBackButton = true
             vc.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(vc, animated: true)
         }

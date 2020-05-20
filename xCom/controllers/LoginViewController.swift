@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    var backButtonDisable: Bool?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +40,10 @@ class LoginViewController: UIViewController {
     */
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardVC") as? DashboardViewController {
+            vc.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
