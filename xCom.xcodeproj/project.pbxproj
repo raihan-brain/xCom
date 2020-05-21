@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		82960BCCD8152DE68320C2CD /* Pods_xCom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC32CED37AD71670FCA478E6 /* Pods_xCom.framework */; };
+		BD15C9562473F0FA0025DB05 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15C9552473F0FA0025DB05 /* SignupViewController.swift */; };
+		BD6C1497247564C300638096 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6C1496247564C300638096 /* Dashboard.storyboard */; };
+		BD6C14992475652600638096 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C14982475652600638096 /* DashboardViewController.swift */; };
 		EB9AD99C24681DA9000F712E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AD99B24681DA9000F712E /* AppDelegate.swift */; };
 		EB9AD99E24681DA9000F712E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AD99D24681DA9000F712E /* SceneDelegate.swift */; };
 		EB9AD9A024681DA9000F712E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AD99F24681DA9000F712E /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		639B17504C2636C715EEB4A5 /* Pods-xCom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xCom.release.xcconfig"; path = "Target Support Files/Pods-xCom/Pods-xCom.release.xcconfig"; sourceTree = "<group>"; };
 		71A3E66E0A6ECDB749DA173C /* Pods-xCom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xCom.debug.xcconfig"; path = "Target Support Files/Pods-xCom/Pods-xCom.debug.xcconfig"; sourceTree = "<group>"; };
+		BD15C9552473F0FA0025DB05 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BD6C1496247564C300638096 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		BD6C14982475652600638096 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		EB9AD99824681DA9000F712E /* xCom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xCom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9AD99B24681DA9000F712E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9AD99D24681DA9000F712E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +70,6 @@
 				71A3E66E0A6ECDB749DA173C /* Pods-xCom.debug.xcconfig */,
 				639B17504C2636C715EEB4A5 /* Pods-xCom.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +112,7 @@
 				EB9AD9A124681DA9000F712E /* Main.storyboard */,
 				EB9AD9A924681DAB000F712E /* LaunchScreen.storyboard */,
 				EB9AD9B624681FB6000F712E /* Auth.storyboard */,
+				BD6C1496247564C300638096 /* Dashboard.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -116,6 +122,8 @@
 			children = (
 				EB9AD99F24681DA9000F712E /* ViewController.swift */,
 				EBBC816C246AFD5D00B98398 /* LoginViewController.swift */,
+				BD15C9552473F0FA0025DB05 /* SignupViewController.swift */,
+				BD6C14982475652600638096 /* DashboardViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9AD9B724681FB6000F712E /* Auth.storyboard in Resources */,
+				BD6C1497247564C300638096 /* Dashboard.storyboard in Resources */,
 				EB9AD9AB24681DAB000F712E /* LaunchScreen.storyboard in Resources */,
 				EB9AD9A824681DAB000F712E /* Assets.xcassets in Resources */,
 				EB9AD9A324681DA9000F712E /* Main.storyboard in Resources */,
@@ -245,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBC816D246AFD5D00B98398 /* LoginViewController.swift in Sources */,
+				BD15C9562473F0FA0025DB05 /* SignupViewController.swift in Sources */,
 				EB9AD9A624681DA9000F712E /* xCom.xcdatamodeld in Sources */,
 				EB9AD9A024681DA9000F712E /* ViewController.swift in Sources */,
 				EB9AD99C24681DA9000F712E /* AppDelegate.swift in Sources */,
 				EBA8292C24683FB700138F47 /* util.swift in Sources */,
 				EB9AD99E24681DA9000F712E /* SceneDelegate.swift in Sources */,
+				BD6C14992475652600638096 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
