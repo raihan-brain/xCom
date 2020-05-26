@@ -40,10 +40,13 @@ class LoginViewController: UIViewController {
     */
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        if let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardVC") as? DashboardViewController {
+        if let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DashboardVC") as? TabBarViewController {
             vc.navigationItem.hidesBackButton = true
+            vc.navigationItem.title = "xCom"
             self.navigationController?.pushViewController(vc, animated: true)
+            
         }
+        
     }
     
 }
